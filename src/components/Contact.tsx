@@ -42,19 +42,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'contact@alexandre.dev',
-      href: 'mailto:contact@alexandre.dev'
+      value: 'kabiagnen.v@gmail.com',
+      href: 'mailto:kabiagnen.v@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Téléphone',
-      value: '+33 6 12 34 56 78',
-      href: 'tel:+33612345678'
+      value: '+237 697 23 62 62',
+      href: 'tel:+237697236262'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Localisation',
-      value: 'Paris, France',
+      value: 'Douala, Cameroun',
       href: '#'
     }
   ];

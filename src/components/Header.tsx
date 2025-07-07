@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Code } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,14 +34,16 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`relative fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+     
+      <div className="container px-4 py-8 min-h-24 flex items-center justify-between">
         <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-          Portfolio
+          KV Dev <span className="text-pink-500 dark:text-yellow-300"> Solutions</span>
+          <Code className="inline ml-2 text-secondary-light dark:text-secondary-dark" size={24} />
         </div>
 
         {/* Desktop Navigation */}
@@ -49,7 +52,7 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:dark:text-yellow-300 transition-colors duration-200"
             >
               {item.label}
             </button>

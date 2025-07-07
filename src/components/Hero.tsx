@@ -63,14 +63,14 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Salut, je suis{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Alexandre
+              Vincent
             </span>
           </h1>
           
           <div className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8 h-12 flex items-center justify-center">
             <span className="font-light">
               {currentText}
-              <span className="animate-pulse">|</span>
+              <span className="animate-pulse text-pink-500 dark:text-yellow-300">|</span>
             </span>
           </div>
           
@@ -88,10 +88,14 @@ const Hero = () => {
               Me contacter
             </button>
             
-            <button className="px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-semibold rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-all duration-200 flex items-center gap-2">
+            <a
+              href="/src/asset/CV_2025070713093543.pdf"
+              download
+              className="px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-semibold rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-all duration-200 flex items-center gap-2"
+            >
               <Download size={20} />
               Télécharger CV
-            </button>
+            </a>
           </div>
         </div>
       </div>

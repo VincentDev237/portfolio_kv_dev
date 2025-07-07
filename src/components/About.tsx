@@ -1,28 +1,29 @@
 import React from 'react';
 import { Code, Palette, Zap, Users } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import picture from '../asset/picture.png';
 
 const About = () => {
   const [ref, isVisible] = useScrollAnimation();
 
   const features = [
     {
-      icon: <Code className="w-6 h-6" />,
+      icon: <Code className="w-6 h-6 text-pink-500 dark:text-yellow-300" />,
       title: 'Développement',
       description: 'Expert en technologies modernes avec une approche clean code'
     },
     {
-      icon: <Palette className="w-6 h-6" />,
+      icon: <Palette className="w-6 h-6 text-pink-500 dark:text-yellow-300" />,
       title: 'Design',
       description: 'Création d\'interfaces utilisateur intuitives et esthétiques'
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6 text-pink-500 dark:text-yellow-300" />,
       title: 'Performance',
       description: 'Optimisation pour des expériences ultra-rapides'
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className="w-6 h-6 text-pink-500 dark:text-yellow-300" />,
       title: 'Collaboration',
       description: 'Travail d\'équipe efficace et communication transparente'
     }
@@ -46,9 +47,9 @@ const About = () => {
             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <div className="aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl shadow-2xl relative overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=500" 
+                  src={picture} 
                   alt="Portrait professionnel" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover animate-float"
                 />
               </div>
             </div>

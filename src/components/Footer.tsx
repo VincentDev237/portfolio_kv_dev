@@ -1,13 +1,13 @@
 import React from 'react';
-import { Heart, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Heart, Github, Linkedin, Twitter, Mail, Code } from 'lucide-react';
 import { SocialLink } from '../types';
 
 const Footer = () => {
   const socialLinks: SocialLink[] = [
-    { name: 'GitHub', url: 'https://github.com', icon: 'Github' },
+    { name: 'GitHub', url: 'https://github.com/VincentDev237', icon: 'Github' },
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'Linkedin' },
     { name: 'Twitter', url: 'https://twitter.com', icon: 'Twitter' },
-    { name: 'Email', url: 'mailto:contact@alexandre.dev', icon: 'Mail' }
+    { name: 'Email', url: 'mailto:kabiagnen.v@gmail.com', icon: 'Mail' }
   ];
 
   const getIcon = (iconName: string) => {
@@ -27,9 +27,10 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <h3 className="text-2xl font-bold text-blue-400 mb-4">
-                Portfolio
-              </h3>
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                KV Dev <span className="text-pink-500 dark:text-yellow-300"> Solutions</span>
+                <Code className="inline ml-2 text-secondary-light dark:text-secondary-dark" size={24} />
+          </div>
               <p className="text-gray-400 leading-relaxed">
                 Développeur passionné créant des expériences numériques exceptionnelles 
                 avec les technologies modernes.
@@ -60,9 +61,9 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-gray-400">
-                <p>Paris, France</p>
-                <p>contact@alexandre.dev</p>
-                <p>+33 6 12 34 56 78</p>
+                <p>Douala, Cameroun</p>
+                <p>kabiagnen.v@gmail.com</p>
+                <p>+237 697 23 62 62</p>
               </div>
             </div>
           </div>
@@ -76,7 +77,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-200"
+                  className="text-gray-400 hover:text-white transform hover:text-pink-500 dark:text-yellow-300 transition-all duration-200"
                   aria-label={social.name}
                 >
                   {getIcon(social.icon)}
@@ -86,13 +87,13 @@ const Footer = () => {
 
             <div className="flex items-center gap-2 text-gray-400">
               <span>Fait avec</span>
-              <Heart size={16} className="text-red-500" />
-              <span>par Alexandre</span>
+              <Heart size={16} className="text-pink-500 dark:text-yellow-300" />
+              <span>par Vincent</span>
             </div>
           </div>
 
           <div className="text-center text-gray-500 text-sm mt-8">
-            <p>&copy; 2025 Alexandre. Tous droits réservés.</p>
+            <p>&copy; 2025 <span className='text-pink-500 dark:text-yellow-300'>VincentDev237</span>. Tous droits réservés.</p>
           </div>
         </div>
       </div>

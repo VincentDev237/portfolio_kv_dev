@@ -97,7 +97,7 @@ const Projects = () => {
 
           {/* Filter */}
           <div className={`flex flex-wrap justify-center gap-4 mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Filter className="text-gray-500 dark:text-gray-400" size={20} />
+            <Filter className="text-gray-500 dark:text-gray-400 text-pink-500 dark:text-yellow-300" size={20} />
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -137,7 +137,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <ExternalLink size={16} className="text-gray-700" />
+                      <ExternalLink size={16} className="text-pink-500 dark:text-yellow-300 text-gray-700" />
                     </a>
                     <a 
                       href={project.githubUrl}
@@ -145,7 +145,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Github size={16} className="text-gray-700" />
+                      <Github size={16} className="text-pink-500 dark:text-yellow-300 text-gray-700" />
                     </a>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+                        className="text-pink-500 dark:text-yellow-300 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
                       >
                         {tech}
                       </span>
