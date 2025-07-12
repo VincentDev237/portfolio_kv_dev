@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Code } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import kvLogo from '../asset/kv_bleu.png';
+import kvLogoWhite from '../asset/kv_blanc.png';
 
 
 const Header = () => {
@@ -39,11 +41,14 @@ const Header = () => {
         ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
-     
-      <div className="container px-4 py-8 min-h-24 flex items-center justify-between">
-        <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-          KV Dev <span className="text-pink-500 dark:text-yellow-300"> Solutions</span>
-          <Code className="inline ml-2 text-secondary-light dark:text-secondary-dark" size={24} />
+      <div className="container px-4 py-6 min-h-20 flex items-center justify-between">
+        <div className="flex items-center">
+          <img 
+            src={isDark ? kvLogoWhite : kvLogo} 
+            alt="KV Dev Solutions" 
+            style={{ height: '120px', width: 'auto' }}
+            className="mr-2"
+          />
         </div>
 
         {/* Desktop Navigation */}

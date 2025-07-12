@@ -1,6 +1,9 @@
 import React from 'react';
 import { Heart, Github, Linkedin, Twitter, Mail, Code } from 'lucide-react';
 import { SocialLink } from '../types';
+import kvLogo from '../asset/kv_bleu.png';
+import kvLogoWhite from '../asset/kv_blanc.png';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Footer = () => {
   const socialLinks: SocialLink[] = [
@@ -9,6 +12,8 @@ const Footer = () => {
     { name: 'Twitter', url: 'https://twitter.com', icon: 'Twitter' },
     { name: 'Email', url: 'mailto:kabiagnen.v@gmail.com', icon: 'Mail' }
   ];
+
+  const { isDark } = useTheme();
 
   const getIcon = (iconName: string) => {
     const icons = {
@@ -27,10 +32,14 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                KV Dev <span className="text-pink-500 dark:text-yellow-300"> Solutions</span>
-                <Code className="inline ml-2 text-secondary-light dark:text-secondary-dark" size={24} />
-          </div>
+            <div className="flex items-center">
+              <img 
+                src={isDark ? kvLogoWhite : kvLogo} 
+                alt="KV Dev Solutions" 
+                style={{ height: '120px', width: 'auto' }}
+                className="mr-2"
+              />
+            </div>
               <p className="text-gray-400 leading-relaxed">
                 Développeur passionné créant des expériences numériques exceptionnelles 
                 avec les technologies modernes.
